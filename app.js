@@ -14,7 +14,7 @@ admin.initializeApp({
 
 app.use(cors()); // Permitimos peticiones de cualquier origen en Render
 
-app.get('/harryBooks', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const snapshot = await admin.database().ref('/').once('value');
     const libros = snapshot.val();
